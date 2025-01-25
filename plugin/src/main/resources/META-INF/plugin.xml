@@ -1,0 +1,15 @@
+<consulo-plugin>
+    <id>consulo.cocos</id>
+    <name>Cocos</name>
+    <description>2D &amp; 3D Game Engine</description>
+    <localize>consulo.cocos.CocosLocalize</localize>
+
+    <depends>consulo.game.framework</depends>
+    <depends>consulo.javascript</depends>
+    <depends>com.intellij.images</depends>
+    <depends>consulo.fontviewer</depends>
+
+    <tags>
+        <tag>game.framework</tag>
+    </tags>
+</consulo-plugin>
