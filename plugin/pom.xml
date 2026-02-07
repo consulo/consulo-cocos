@@ -39,6 +39,7 @@
                     <dependencies>
                         <dependency>com.intellij.xml</dependency>
                         <dependency>consulo.javascript</dependency>
+                        <dependency>consulo.json</dependency>
                         <dependency>consulo.fontviewer</dependency>
                         <dependency>consulo.audio</dependency>
                         <dependency>consulo.game.framework</dependency>
@@ -88,6 +89,12 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>consulo.javascript</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>consulo.json</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>

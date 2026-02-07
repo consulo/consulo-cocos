@@ -1,29 +1,22 @@
 package consulo.cocos.module.meta;
 
-import consulo.annotation.access.RequiredReadAction;
+import com.intellij.json.JsonLanguage;
 import consulo.gameFramework.icon.GameFrameworkIconGroup;
 import consulo.gameFramework.meta.MetadataFileType;
-import consulo.javascript.language.JavaScriptFileTypeWithVersion;
-import consulo.javascript.language.JavaScriptLanguage;
-import consulo.json.lang.JsonJavaScriptVersion;
 import consulo.language.file.LanguageFileType;
-import consulo.language.version.LanguageVersion;
 import consulo.localize.LocalizeValue;
-import consulo.module.Module;
 import consulo.ui.image.Image;
-import consulo.virtualFileSystem.VirtualFile;
 import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 /**
  * @author VISTALL
  * @since 2025-01-25
  */
-public class CocosMetaFileType extends LanguageFileType implements MetadataFileType, JavaScriptFileTypeWithVersion {
+public class CocosMetaFileType extends LanguageFileType implements MetadataFileType {
     public static final CocosMetaFileType INSTANCE = new CocosMetaFileType();
 
     private CocosMetaFileType() {
-        super(JavaScriptLanguage.INSTANCE);
+        super(JsonLanguage.INSTANCE);
     }
 
     @Nonnull
@@ -42,12 +35,5 @@ public class CocosMetaFileType extends LanguageFileType implements MetadataFileT
     @Override
     public Image getIcon() {
         return GameFrameworkIconGroup.metadatafile();
-    }
-
-    @RequiredReadAction
-    @Nonnull
-    @Override
-    public LanguageVersion getLanguageVersion(@Nullable Module module, @Nullable VirtualFile virtualFile) {
-        return JsonJavaScriptVersion.getInstance();
     }
 }

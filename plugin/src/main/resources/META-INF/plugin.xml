@@ -6,6 +6,7 @@
 
     <depends>consulo.game.framework</depends>
     <depends>consulo.javascript</depends>
+    <depends>consulo.json</depends>
     <depends>com.intellij.images</depends>
     <depends>consulo.fontviewer</depends>
 
