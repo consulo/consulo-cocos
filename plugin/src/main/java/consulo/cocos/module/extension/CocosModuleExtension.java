@@ -8,7 +8,7 @@ import consulo.module.Module;
 import consulo.module.content.layer.ModuleRootLayer;
 import consulo.module.content.layer.extension.ModuleExtensionBase;
 import consulo.module.extension.ModuleInheritableNamedPointer;
-import consulo.typescript.version.TypeScriptLanguageVersion;
+import consulo.typescript.version.BaseTypeScriptLanguageVersion;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 
@@ -55,7 +55,7 @@ public class CocosModuleExtension extends ModuleExtensionBase<CocosModuleExtensi
     @Nonnull
     @Override
     public LanguageVersion getLanguageVersion() {
-        return TypeScriptLanguageVersion.getInstance();
+        return BaseTypeScriptLanguageVersion.getLatest();
     }
 
     @Nonnull
